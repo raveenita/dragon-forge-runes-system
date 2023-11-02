@@ -12,14 +12,14 @@ export class SystemRuneService {
   constructor() { }
 
    /**
-   * @description Will retrieve the runes from the API.
+   * @description Will retrieve the runes
    */
   public getRunes(): Array<Rune> {
-    return this.runes;
+    return this.shuffle();
   }
 
   /**
-   * @description Will retrieve the runes from the API.
+   * @description Will retrieve the runes
    */
   public getRune(): Rune {
     return {} as Rune;
@@ -30,6 +30,7 @@ export class SystemRuneService {
    * @requires Date: The current date to shuffle the runes.
    */
   public shuffle(date: Date = new Date()): Array<Rune> {
-    return this.runes.sort(() => Math.random() - date.getDate());
+    console.log(date.getMilliseconds() / 1000);
+    return this.runes.sort(() => Math.random() - date.getMilliseconds() / 1000);
   }
 }

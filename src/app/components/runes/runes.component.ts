@@ -15,6 +15,5 @@ export class RunesComponent implements OnInit {
   ngOnInit(): void {
     this.runes = this.systemRune.getRunes();
   }
-
 }
 

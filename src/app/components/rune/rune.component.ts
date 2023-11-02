@@ -12,4 +12,9 @@ export class RuneComponent implements OnInit  {
   ngOnInit(): void {
     console.log(this.rune);
   }
+
+
+  composeRuneClassName() {
+    return `rune__symbol rune__symbol--${this.rune?.name.toLocaleLowerCase()}`;
+  }
 }

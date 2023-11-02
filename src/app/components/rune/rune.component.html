@@ -1,4 +1,16 @@
-<article *ngIf="rune !== undefined">
-  <h2>{{ rune.name }} ({{ rune.symbol }}) </h2>
-  <mark>{{ rune.title }}</mark>
+<article class="rune" *ngIf="rune !== undefined">
+  <div class="rune__inner">
+    <header class="rune__front">
+        <img src="assets/dragon.png" width="60" alt="Clique na que se conectar para revelar a runa">
+    </header>
+    <footer class="rune__back">
+      <span [ngClass]="composeRuneClassName()">
+        <span class="symbol__line line--1"></span>
+        <span class="symbol__line line--2"></span>
+        <span class="symbol__line line--3"></span>
+      </span>
+      <h2 class="rune__name">{{ rune.name }} ({{ rune.symbol }}) </h2>
+    </footer>
+  </div>
+  <!-- <strong class="rune__activation">{{ rune.title }}</strong> -->
 </article>
