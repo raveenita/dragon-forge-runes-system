@@ -5,11 +5,11 @@
   position: relative;
 
 
-  &:hover {
+  // &:hover {
     .rune__inner {
       transform: rotateY(180deg);
     }
-  }
+  // }
 
   &__inner {
     width: 100%;
@@ -41,7 +41,7 @@
     color: white;
     transform: rotateY(180deg);
     display: flex;
-    align-items: end;
+    align-items: flex-end;
     justify-content: center;
   }
 
@@ -64,7 +64,6 @@
       display: block;
       position: relative;
     }
-
 
     &--ratanen {
       .line--1 {
@@ -92,6 +91,68 @@
         transform: rotate(-60deg);
         position: absolute;
         border-top: 3px solid white;
+      }
+    }
+
+    &--mah {
+      .line--1,
+      .line--2,
+      .line--3 {
+        width: 3px;
+        background-color: white;
+      }
+
+      .line--1 {
+        width: 50px;
+        height: 3px;
+        top: 33px;
+        left: 30px;
+        transform: rotate(-35deg);
+        position: absolute;
+        background-color: #fff;
+      }
+
+      .line--2 {
+        left: -20px;
+        bottom: -20px;
+        height: 75px;
+      }
+
+      .line--3 {
+        transform: rotate(125deg);
+        bottom: -44px;
+        height: 50px;
+        left: -3px;
+      }
+    }
+
+    &--shaan {
+      .line--1,
+      .line--3 {
+        width: 65px;
+      }
+
+      .line--1 {
+        top: 40px;
+        height: 3px;
+        position: absolute;
+        transform: rotate(-50deg);
+        background-color: white;
+      }
+
+      .line--2 {
+        width: 3px;
+        position: absolute;
+        height: 90px;
+        background-color: white;
+      }
+
+      .line--3 {
+        top: 40px;
+        height: 3px;
+        transform: rotate(50deg);
+        position: absolute;
+        background-color: white;
       }
     }
   }
