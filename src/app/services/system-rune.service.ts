@@ -19,7 +19,7 @@ export class SystemRuneService {
   }
 
   /**
-   * @description Will retrieve the runes
+   * @description Will retrieve a rune
    */
   public getRune(): Rune {
     return {} as Rune;
@@ -30,7 +30,6 @@ export class SystemRuneService {
    * @requires Date: The current date to shuffle the runes.
    */
   public shuffle(date: Date = new Date()): Array<Rune> {
-    console.log(date.getMilliseconds() / 1000);
     return this.runes.sort(() => Math.random() - date.getMilliseconds() / 1000);
   }
 }

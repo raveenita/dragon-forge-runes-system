@@ -15,6 +15,6 @@ export class RuneComponent implements OnInit  {
 
 
   composeRuneClassName() {
-    return `rune__symbol rune__symbol--${this.rune?.name.toLocaleLowerCase()}`;
+    return `rune__symbol rune__symbol--${this.rune?.name.toLocaleLowerCase().replace("'", "")}`;
   }
 }
