@@ -239,5 +239,46 @@
         transform: rotate(-180deg);
       }
     }
+
+    &--thaan {
+      .line--1,
+      .line--2,
+      .line--3 {
+        background-color: white;
+      }
+
+      .line--1 {
+        margin-left: 56px;
+        transform: rotate(45deg);
+        margin-top: -23px;
+      }
+
+      .line--3 {
+        margin-right: 55px;
+        transform: rotate(-45deg);
+        margin-top: -23px;
+      }
+
+      .line--1,
+      .line--3 {
+        height: 35px;
+        width: 3px;
+        position: absolute;
+      }
+
+      .line--2 {
+        width: 35px;
+        height: 3px;
+        position: absolute;
+
+        &:before {
+          content: "";
+          width: 3px;
+          height: 40px;
+          position: absolute;
+          background-color: white;
+        }
+      }
+    }
   }
 }
